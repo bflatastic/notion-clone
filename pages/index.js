@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React, { Component } from "react";
 import Header from "../components/Header";
 import HeroImg from "../public/images/home-page-hero.png";
@@ -21,7 +22,7 @@ export default function Home() {
       </Head>
 
       {/* Navbar */}
-      <div className="sticky top-0 z-50">
+      <div className="fixed top-0 z-50 w-full">
         <Header />
       </div>
 
