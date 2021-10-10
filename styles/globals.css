@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body;
+  }
+
+  h1 {
+    @apply font-bold text-4xl md:text-5xl xl:text-7xl;
+  }
+
+  h2 {
+    @apply font-bold text-4xl;
+  }
+
+  h3 {
+    @apply font-medium text-xl text-gray-500;
+  }
+
+  .wrapper {
+    @apply max-w-7xl mx-auto p-5 xl:px-10;
+  }
+
+  .btn {
+    @apply flex items-center text-center px-4 rounded text-white text-base font-medium cursor-pointer h-btn transition-colors;
+  }
+
+  .btn-lg {
+    @apply h-btn-lg text-base2 px-7;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-darker border border-primary hover:border-primary-darker;
+  }
+
+  .logos-wrapper {
+    @apply w-16 h-auto;
+  }
+}
+
+@responsive {
+  .nav-divider {
+    width: 1.5px;
+    height: 20px;
+    content: "";
+  }
+}

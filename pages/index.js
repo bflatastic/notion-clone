@@ -1,0 +1,70 @@
+import Head from "next/head";
+import Image from "next/image";
+import Header from "../components/Header";
+import HeroImg from "../public/images/home-page-hero.png";
+import LoomLogo from "../public/images/loom.png";
+import PixarLogo from "../public/images/pixar.png";
+import IBMLogo from "../public/images/ibm.png";
+import NikeLogo from "../public/images/nike.png";
+import SpotifyLogo from "../public/images/spotify.png";
+import SlackLogo from "../public/images/slack.png";
+
+export default function Home() {
+  return (
+    <div>
+      <Head>
+        <title>Notion</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      {/* Navbar */}
+      <Header />
+
+      {/* Hero */}
+      <div>
+        <div className="wrapper">
+          <div className="text-center lg:text-left lg:py-20 grid grid-cols-2 gap-4 lg:px-6 xl:px-0">
+            <div className="w-full order-last col-span-2 lg:order-first lg:col-span-1 max-w-xs md:max-w-md xl:max-w-none mx-auto lg:mx-0">
+              <h1>One workspace. Every team.</h1>
+              <h3 className="mt-4 lg:max-w-md">
+                We’re more than a doc. Or a table. Customize Notion to work the
+                way you do.
+              </h3>
+              <button className="btn btn-lg btn-primary mt-6 mx-auto lg:mx-0">
+                Try Notion free
+              </button>
+              <div className="mt-10">
+                <span className="uppercase text-xs font-normal text-gray-400">
+                  Trusted by teams at
+                </span>
+                <div className="flex space-x-5 mt-3 items-center">
+                  <div className="logos-wrapper">
+                    <Image src={LoomLogo} />
+                  </div>
+                  <div className="logos-wrapper">
+                    <Image src={PixarLogo} />
+                  </div>
+                  <div className="logos-wrapper">
+                    <Image src={IBMLogo} />
+                  </div>
+                  <div className="logos-wrapper">
+                    <Image src={NikeLogo} />
+                  </div>
+                  <div className="logos-wrapper">
+                    <Image src={SpotifyLogo} />
+                  </div>
+                  <div className="logos-wrapper">
+                    <Image src={SlackLogo} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full col-span-2 max-w-xs md:max-w-lg lg:max-w-none lg:col-span-1 mx-auto items-center">
+              <Image src={HeroImg} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
