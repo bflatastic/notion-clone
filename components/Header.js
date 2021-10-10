@@ -54,10 +54,9 @@ function Header() {
               <div className="hidden lg:flex lg:w-auto justify-center">
                 <ul className="flex flex-col lg:flex-row lg:space-x-2">
                   {navigation.map((item) => (
-                    <li>
+                    <li key={item.name}>
                       <Link href={item.href}>
                         <a
-                          key={item.name}
                           className={classNames(
                             item.current
                               ? "text-base font-medium text-gray-800 px-2 py-1 bg-gray-100 hover:bg-gray-100 rounded transition-colors"
@@ -94,10 +93,9 @@ function Header() {
               >
                 <ul className="space-y-4 pb-5">
                   {navigation.map((item) => (
-                    <li>
+                    <li key={item.name + "2"}>
                       <Link href={item.href}>
                         <a
-                          key={item.name}
                           className={classNames(
                             item.current
                               ? "text-base font-medium text-gray-800 px-2 py-1 bg-gray-100 hover:bg-gray-100 rounded transition-colors"
