@@ -25,12 +25,12 @@ function Header() {
           <div className="flex w-full lg:w-auto justify-between lg:justify-start lg:space-x-5 items-center flex-wrap">
             {/* Logo */}
             <div>
-              <a className="flex items-center space-x-2" href="/">
+              <Link className="flex items-center space-x-2" href="/">
                 <div className="w-9 h-9">
                   <Image src={Logo} />
                 </div>
                 <span className="text-base1 font-semibold">Notion</span>
-              </a>
+              </Link>
             </div>
             {/* Mobile Nav */}
             <div className="flex lg:hidden">
