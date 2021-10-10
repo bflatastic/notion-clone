@@ -7,11 +7,10 @@ import { Popover } from "@headlessui/react";
 const NavItem = (props) => (
   // Menu list items
   <li className="flex items-center justify-center">
-    <Link
-      href={props.href}
-      className="text-base font-medium text-gray-800 px-2 py-1 hover:bg-gray-100 rounded transition-colors"
-    >
-      {props.text}
+    <Link href={props.href}>
+      <a className="text-base font-medium text-gray-800 px-2 py-1 hover:bg-gray-100 rounded transition-colors">
+        {props.text}
+      </a>
     </Link>
   </li>
 );
@@ -25,11 +24,13 @@ function Header() {
           <div className="flex w-full lg:w-auto justify-between lg:justify-start lg:space-x-5 items-center flex-wrap">
             {/* Logo */}
             <div>
-              <Link className="flex items-center space-x-2" href="/">
-                <div className="w-9 h-9">
-                  <Image src={Logo} />
-                </div>
-                <span className="text-base1 font-semibold">Notion</span>
+              <Link href="/">
+                <a className="flex items-center space-x-2">
+                  <div className="w-9 h-9">
+                    <Image src={Logo} />
+                  </div>
+                  <span className="text-base1 font-semibold">Notion</span>
+                </a>
               </Link>
             </div>
             {/* Mobile Nav */}
@@ -37,7 +38,7 @@ function Header() {
               <Popover.Button>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-7 w-7"
+                  className="h-7 w-7"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >

@@ -27,7 +27,7 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div>
+      <div className="mt-20">
         <div className="wrapper">
           <div className="text-center lg:text-left lg:py-20 grid grid-cols-2 gap-4">
             <div className="w-full order-last col-span-2 lg:order-first lg:col-span-1 max-w-xs md:max-w-md xl:max-w-none mx-auto lg:mx-0">
