@@ -81,36 +81,43 @@ function Header() {
 
           {/* NavBar Mobile */}
           <Disclosure.Panel>
-            <div className="flex w-full lg:hidden justify-center text-center border-b">
-              <Transition
-                as={Fragment}
-                enter="transition duration-100 ease-out"
-                enterFrom="transform scale-95 opacity-0"
-                enterTo="transform scale-100 opacity-100"
-                leave="transition duration-75 ease-out"
-                leaveFrom="transform scale-100 opacity-100"
-                leaveTo="transform scale-95 opac  ity-0"
-              >
-                <ul className="space-y-4 pb-5">
-                  {navigation.map((item) => (
-                    <li key={item.name + "Mobile"}>
-                      <Link href={item.href}>
-                        <a
-                          className={classNames(
-                            item.current
-                              ? "text-base font-medium text-gray-800 px-2 py-1 bg-gray-100 hover:bg-gray-100 rounded transition-colors"
-                              : "text-base font-medium text-gray-800 px-2 py-1 hover:bg-gray-100 rounded transition-colors"
-                          )}
-                          aria-current={item.current ? "page" : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </Transition>
-            </div>
+            {({ close }) => (
+              <div className="flex w-full lg:hidden justify-center text-center border-b">
+                <Transition
+                  as={Fragment}
+                  enter="transition duration-100 ease-out"
+                  enterFrom="transform scale-95 opacity-0"
+                  enterTo="transform scale-100 opacity-100"
+                  leave="transition duration-75 ease-out"
+                  leaveFrom="transform scale-100 opacity-100"
+                  leaveTo="transform scale-95 opac  ity-0"
+                >
+                  <ul className="space-y-4 pb-5">
+                    {navigation.map((item) => (
+                      <li
+                        key={item.name + "Mobile"}
+                        onClick={async () => {
+                          close();
+                        }}
+                      >
+                        <Link href={item.href}>
+                          <a
+                            className={classNames(
+                              item.current
+                                ? "text-base font-medium text-gray-800 px-2 py-1 bg-gray-100 hover:bg-gray-100 rounded transition-colors"
+                                : "text-base font-medium text-gray-800 px-2 py-1 hover:bg-gray-100 rounded transition-colors"
+                            )}
+                            aria-current={item.current ? "page" : undefined}
+                          >
+                            {item.name}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Transition>
+              </div>
+            )}
           </Disclosure.Panel>
         </div>
       )}

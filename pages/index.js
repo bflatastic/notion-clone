@@ -12,6 +12,7 @@ import SpotifyLogo from "../public/images/spotify.png";
 import SlackLogo from "../public/images/slack.png";
 import SpotContextImg from "../public/images/spot-context.png";
 import ContextTileImg from "../public/images/context-tile.png";
+import EcosystemTileImg from "../public/images/ecosystem-tile.png";
 import Fade from "react-reveal/Fade";
 
 export default function Home() {
@@ -23,13 +24,13 @@ export default function Home() {
       </Head>
 
       {/* Navbar */}
-      <div className="fixed top-0 z-50 w-full">
+      <div className="sticky top-0 z-50 w-full">
         <Header />
       </div>
 
       {/* Hero */}
 
-      <div className="pt-20">
+      <div>
         <div className="wrapper">
           <div className="text-center lg:text-left lg:py-20 grid grid-cols-2 gap-4">
             <Fade bottom distance="20px">
@@ -78,7 +79,7 @@ export default function Home() {
       </div>
 
       <div id="context">
-        <div className="wrapper pt-40">
+        <div className="wrapper pt-20">
           <div className="grid grid-cols-3 gap-10">
             <div className="flex items-center col-span-3 lg:col-span-1">
               <Fade left distance="20px">
@@ -108,7 +109,7 @@ export default function Home() {
       </div>
 
       <div>
-        <div className="wrapper pt-40">
+        <div className="wrapper pt-20">
           <div className="grid grid-cols-3 gap-10">
             <div className="flex items-center col-span-3 lg:col-span-1">
               <Fade left distance="20px">
@@ -119,18 +120,18 @@ export default function Home() {
                     height={65}
                     src={SpotContextImg}
                   />
-                  <h2>Never ask “What’s the context?” again</h2>
+                  <h2>Benefit from a global ecosystem of creators</h2>
                   <p className="subheader">
-                    Stale wikis aren't helpful. Neither are floating docs. In
-                    Notion, your daily work and knowledge live side by side — so
-                    you never lose context.
+                    Get inspiration from thousands of community-made templates,
+                    integrations, and events. You'll never want for resources or
+                    support.
                   </p>
                 </div>
               </Fade>
             </div>
             <Fade right distance="20px">
               <div className="col-span-3 lg:col-span-2">
-                <Image className="rounded-xl" src={ContextTileImg} />
+                <Image className="rounded-xl" src={EcosystemTileImg} />
               </div>
             </Fade>
           </div>
