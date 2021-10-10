@@ -7,8 +7,8 @@ import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Product", href: "#", current: true },
-  { name: "Solution", href: "#", current: false },
+  { name: "Product", href: "#", current: false },
+  { name: "Solution", href: "#context", current: false },
   { name: "Resources", href: "#", current: false },
   { name: "Download", href: "#", current: false },
   { name: "Pricing", href: "#", current: false },
@@ -23,7 +23,7 @@ function Header() {
     <Disclosure as="nav" className="relative">
       {({ open }) => (
         <div className="w-full bg-white">
-          <div className="flex justify-between items-center wrapper">
+          <div className="flex justify-between items-center navbar">
             {/* Left Nav */}
             <div className="flex w-full lg:w-auto justify-between lg:justify-start lg:space-x-5 items-center flex-wrap">
               {/* Logo */}
@@ -93,7 +93,7 @@ function Header() {
               >
                 <ul className="space-y-4 pb-5">
                   {navigation.map((item) => (
-                    <li key={item.name + "2"}>
+                    <li key={item.name + "Mobile"}>
                       <Link href={item.href}>
                         <a
                           className={classNames(

@@ -29,7 +29,7 @@ export default function Home() {
 
       {/* Hero */}
 
-      <div className="mt-20">
+      <div className="pt-20">
         <div className="wrapper">
           <div className="text-center lg:text-left lg:py-20 grid grid-cols-2 gap-4">
             <Fade bottom distance="20px">
@@ -77,8 +77,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        <div className="wrapper">
+      <div id="context">
+        <div className="wrapper pt-40">
           <div className="grid grid-cols-3 gap-10">
             <div className="flex items-center col-span-3 lg:col-span-1">
               <Fade left distance="20px">
@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       <div>
-        <div className="wrapper">
+        <div className="wrapper pt-40">
           <div className="grid grid-cols-3 gap-10">
             <div className="flex items-center col-span-3 lg:col-span-1">
               <Fade left distance="20px">

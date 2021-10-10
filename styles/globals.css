@@ -39,9 +39,17 @@
   .logos-wrapper {
     @apply w-16 h-auto;
   }
+
+  .navbar {
+    @apply max-w-7xl mx-auto p-5 lg:px-10;
+  }
 }
 
 @responsive {
+  html {
+    scroll-behavior: smooth;
+  }
+
   .nav-divider {
     width: 1.5px;
     height: 20px;
