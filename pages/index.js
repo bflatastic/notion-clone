@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import React, { Component } from "react";
 import Header from "../components/Header";
 import HeroImg from "../public/images/home-page-hero.png";
 import LoomLogo from "../public/images/loom.png";
@@ -8,6 +9,8 @@ import IBMLogo from "../public/images/ibm.png";
 import NikeLogo from "../public/images/nike.png";
 import SpotifyLogo from "../public/images/spotify.png";
 import SlackLogo from "../public/images/slack.png";
+import SpotContextImg from "../public/images/spot-context.png";
+import ContextTileImg from "../public/images/context-tile.png";
 
 export default function Home() {
   return (
@@ -18,18 +21,20 @@ export default function Home() {
       </Head>
 
       {/* Navbar */}
-      <Header />
+      <div className="sticky top-0 z-50">
+        <Header />
+      </div>
 
       {/* Hero */}
       <div>
         <div className="wrapper">
-          <div className="text-center lg:text-left lg:py-20 grid grid-cols-2 gap-4 lg:px-6 xl:px-0">
+          <div className="text-center lg:text-left lg:py-20 grid grid-cols-2 gap-4">
             <div className="w-full order-last col-span-2 lg:order-first lg:col-span-1 max-w-xs md:max-w-md xl:max-w-none mx-auto lg:mx-0">
               <h1>One workspace. Every team.</h1>
-              <h3 className="mt-4 lg:max-w-md">
+              <p className="mt-4 lg:max-w-md subheader">
                 We’re more than a doc. Or a table. Customize Notion to work the
                 way you do.
-              </h3>
+              </p>
               <button className="btn btn-lg btn-primary mt-6 mx-auto lg:mx-0">
                 Try Notion free
               </button>
@@ -61,6 +66,32 @@ export default function Home() {
             </div>
             <div className="w-full col-span-2 max-w-xs md:max-w-lg lg:max-w-none lg:col-span-1 mx-auto items-center">
               <Image src={HeroImg} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="wrapper">
+          <div className="grid grid-cols-3 gap-10">
+            <div className="flex items-center col-span-3 lg:col-span-1">
+              <div className="space-y-4  ">
+                <Image
+                  className="object-contain"
+                  width={80}
+                  height={65}
+                  src={SpotContextImg}
+                />
+                <h2>Never ask “What’s the context?” again</h2>
+                <p className="subheader">
+                  Stale wikis aren't helpful. Neither are floating docs. In
+                  Notion, your daily work and knowledge live side by side — so
+                  you never lose context.
+                </p>
+              </div>
+            </div>
+            <div className="col-span-3 lg:col-span-2">
+              <Image className="rounded-xl" src={ContextTileImg} />
             </div>
           </div>
         </div>

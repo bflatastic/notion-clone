@@ -16,8 +16,8 @@ const NavItem = (props) => (
 function Header() {
   return (
     <div>
-      <div className="w-full sticky">
-        <nav className="flex mdflex justify-between items-center wrapper">
+      <div className="w-full bg-white">
+        <nav className="flex justify-between items-center wrapper">
           {/* Left Nav */}
           <div className="flex space-x-5 items-center">
             {/* Logo */}
@@ -48,6 +48,23 @@ function Header() {
               <NavItem href="/login" text="Log in" />
               <button className="btn btn-primary">Try Notion free</button>
             </ul>
+          </div>
+          {/* Mobile Nav */}
+          <div className="flex lg:hidden">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
           </div>
         </nav>
       </div>
