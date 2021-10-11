@@ -24,14 +24,14 @@ export default function Home() {
       </Head>
 
       {/* Navbar */}
-      <div className="sticky top-0 z-50 w-full">
+      <div className="fixed top-0 z-50 w-full">
         <Header />
       </div>
 
       {/* Hero */}
 
       <div>
-        <div className="wrapper">
+        <div className="wrapper mt-20">
           <div className="text-center lg:text-left lg:py-20 grid grid-cols-2 gap-4">
             <Fade bottom distance="20px">
               <div className="w-full order-last col-span-2 lg:order-first lg:col-span-1 max-w-xs md:max-w-md xl:max-w-none mx-auto lg:mx-0">
@@ -79,7 +79,7 @@ export default function Home() {
       </div>
 
       <div id="context">
-        <div className="wrapper pt-20">
+        <div className="wrapper pt-32">
           <div className="grid grid-cols-3 gap-10">
             <div className="flex items-center col-span-3 lg:col-span-1">
               <Fade left distance="20px">
